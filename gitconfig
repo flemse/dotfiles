@@ -3,7 +3,7 @@
   d = diff
   uncommit = reset --soft HEAD^
   co = checkout
-  st = status -s
+  st = status -sb
   ps = push
   pl = pull
   br = branch

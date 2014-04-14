@@ -22,7 +22,8 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'chriskempson/base16-vim'
-Bundle 'nono/handlebars'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'dsawardekar/ember.vim'
 
 " *********************************************
 " *                 Settings                  *
@@ -89,7 +90,7 @@ nnoremap // <leader>ci
 "# ctrlp.vim
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:mustache_abbrevations=1
 
-au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 au BufRead,BufNewFile *.prawn set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
