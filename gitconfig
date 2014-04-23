@@ -9,7 +9,7 @@
   br = branch
   b = blame --date=relative
 [user]
-  name = Flemming
+  name = "Flemming Thesbjerg"
   email = flemming.thesbjerg@gmail.com
 [color]
   diff = auto
