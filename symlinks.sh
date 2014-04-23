@@ -8,8 +8,6 @@ mkdir -p $olddir
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-
-
 for file in $files; do
   mv ~/.$file $olddir
   ln -s $dir/$file ~/.$file
