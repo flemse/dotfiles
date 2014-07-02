@@ -17,3 +17,6 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
+
+#start docker daemon
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
