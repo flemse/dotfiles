@@ -1,0 +1,22 @@
+let g:rails_projections = {
+	      \  "app/permitters/*_permitter.rb": {
+	      \    "command": "permitter",
+	      \    "template": "class %SPermitter < ActiveController::Permitter\nend",
+	      \    "keywords": "Permitters"
+	      \  },
+        \  "app/validators/*_validator.rb": {
+        \    "command": "validator",
+        \    "template": "class %SValidator < ActiveModel::Validator\nend",
+        \    "keywords": "Validators"
+        \  },
+        \  "app/serializers/*_serializer.rb": {
+        \    "command": "serializer",
+        \    "template": "class %SSerializer < ActiveModel::Serializer\nend",
+        \    "keywords": "Serializers"
+        \  },
+        \  "app/services/*_service.rb": {
+        \    "command": "service",
+        \    "template": "class %SService\nend",
+        \    "keywords": "Service"
+        \  }
+        \}
