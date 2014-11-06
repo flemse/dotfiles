@@ -93,8 +93,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:mustache_abbrevations=1
 
-if filereadable(glob("~/.vimrc.rails"))
-    source ~/.vim/vimrc.rails
+if filereadable(glob("~/.vim/.vimrc.rails"))
+    source ~/.vim/.vimrc.rails
 endif
 
 au BufRead,BufNewFile *.prawn set filetype=ruby

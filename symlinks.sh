@@ -19,8 +19,8 @@ for file in $files; do
 done
 
 for vimfile in $(ls $dir/vimfiles); do
-  if ! ln -s $dir/vimfiles/$vimfile ~/.vim/.$file &> /dev/null; then
-    $verbose && echo "$file already symlinked"
+  if ! ln -s $dir/vimfiles/$vimfile ~/.vim/.$vimfile &> /dev/null; then
+    $verbose && echo "$vimfile already symlinked"
   fi
 done
 echo "Done!"
