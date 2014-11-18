@@ -1,7 +1,7 @@
 let g:rails_projections = {
 	      \  "app/permitters/*_permitter.rb": {
 	      \    "command": "permitter",
-	      \    "template": "class %SPermitter < ActiveController::Permitter\nend",
+	      \    "template": "class %SPermitter < ActionController::Permitter\nend",
 	      \    "keywords": "Permitters"
 	      \  },
         \  "app/validators/*_validator.rb": {
