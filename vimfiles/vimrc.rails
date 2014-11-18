@@ -18,5 +18,10 @@ let g:rails_projections = {
         \    "command": "service",
         \    "template": "class %SService\nend",
         \    "keywords": "Service"
+        \  },
+        \  "app/associations/*_association.rb": {
+        \    "command": "association",
+        \    "template": "class %SAssociation\n  extend ActiveSupport::Concern\nend",
+        \    "keywords": "Association"
         \  }
         \}
