@@ -8,6 +8,7 @@
   pl = pull
   br = branch
   b = blame --date=relative
+  rpo = remote prune origin
 [user]
   name = "Flemming Thesbjerg"
   email = flemming.thesbjerg@gmail.com
