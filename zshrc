@@ -21,4 +21,5 @@ PATH=$PATH:/usr/local/share/npm/bin
 #start docker daemon
 export DOCKER_HOST_IP=$(boot2docker ip 2>/dev/null)
 export DOCKER_HOST=tcp://$DOCKER_HOST_IP:2375
+
 export EDITOR=mvim
