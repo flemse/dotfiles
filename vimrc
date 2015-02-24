@@ -25,6 +25,7 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'dsawardekar/ember.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'SQLUtilities'
 
 " *********************************************
 " *                 Settings                  *
