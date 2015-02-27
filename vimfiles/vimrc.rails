@@ -4,6 +4,11 @@ let g:rails_projections = {
 	      \    "template": "class %SPermitter < ActionController::Permitter\nend",
 	      \    "keywords": "Permitters"
 	      \  },
+	      \  "spec/factories/*.rb": {
+	      \    "command": "factory",
+        \    "template": "FactoryGirl.define do\n  factory :%s do\n  end\nend",
+	      \    "keywords": "Factorygirl factories"
+	      \  },
         \  "app/validators/*_validator.rb": {
         \    "command": "validator",
         \    "template": "class %SValidator < ActiveModel::Validator\nend",
@@ -23,6 +28,11 @@ let g:rails_projections = {
         \    "command": "association",
         \    "template": "class %SAssociation\n  extend ActiveSupport::Concern\nend",
         \    "keywords": "Association"
+        \  },
+        \  "app/interactors/*_interactor.rb": {
+        \    "command": "interactor",
+        \    "template": "class %SInteractor\n  include Delayed::RecurringJob\n  run_every 1.day\n  run_at \"11:00\"\n  timezone \"Copenhagen\"\n  queue \"default\"\n  def perform\n    #Do some work here!\n  end\nend",
+        \    "keywords": "Interactor"
         \  },
         \  "app/assets/javascripts/models/*.js": {
         \    "command": "javascriptmodel",
