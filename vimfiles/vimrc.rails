@@ -9,6 +9,11 @@ let g:rails_projections = {
         \    "template": "FactoryGirl.define do\n  factory :%s do\n  end\nend",
 	      \    "keywords": "Factorygirl factories"
 	      \  },
+        \  "app/presenters/*_presenter.rb": {
+        \    "command": "presenter",
+        \    "template": "class %SPresenter < BasePresenter\nend",
+        \    "keywords": "presenters"
+        \  },
         \  "app/validators/*_validator.rb": {
         \    "command": "validator",
         \    "template": "class %SValidator < ActiveModel::Validator\nend",
