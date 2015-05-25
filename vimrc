@@ -23,9 +23,10 @@ Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'chriskempson/base16-vim'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'dsawardekar/ember.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'SQLUtilities'
+Bundle 'heartsentwined/vim-emblem'
+Bundle 'dsawardekar/ember.vim'
 
 " *********************************************
 " *                 Settings                  *
@@ -101,3 +102,4 @@ endif
 
 au BufRead,BufNewFile *.prawn set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
+au BufRead,BufNewFile *.embl set filetype=emblem
