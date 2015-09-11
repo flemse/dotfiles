@@ -99,5 +99,14 @@ if filereadable(glob("~/.vim/.vimrc.rails"))
     source ~/.vim/.vimrc.rails
 endif
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_enable_ruby_checker = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 au BufRead,BufNewFile *.prawn set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby

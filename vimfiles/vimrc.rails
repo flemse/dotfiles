@@ -4,6 +4,11 @@ let g:rails_projections = {
 	      \    "template": "class %SPermitter < ActionController::Permitter\nend",
 	      \    "keywords": "Permitters"
 	      \  },
+	      \  "app/forms/*_form.rb": {
+	      \    "command": "form",
+	      \    "template": "class %SForm < ActionForm::Base\nend",
+	      \    "keywords": "Form Objects"
+	      \  },
 	      \  "spec/factories/*.rb": {
 	      \    "command": "factory",
         \    "template": "FactoryGirl.define do\n  factory :%s do\n  end\nend",
@@ -23,6 +28,11 @@ let g:rails_projections = {
         \    "command": "serializer",
         \    "template": "class %SSerializer < ActiveModel::Serializer\nend",
         \    "keywords": "Serializers"
+        \  },
+        \  "app/queries/*_query.rb": {
+        \    "command": "query",
+        \    "template": "class %SQuery\nend",
+        \    "keywords": "query"
         \  },
         \  "app/services/*_service.rb": {
         \    "command": "service",
