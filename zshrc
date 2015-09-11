@@ -21,6 +21,6 @@ source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
 
-eval "$(boot2docker shellinit)" > /dev/null 2>&1
+eval `boot2docker shellinit 2>/dev/null`
 
 export EDITOR=mvim
