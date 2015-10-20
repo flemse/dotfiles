@@ -68,7 +68,7 @@ set history=1000                  " Store lots of :cmdline history
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 set directory=/tmp                " Keep swap files in one location
-set timeoutlen=500
+set timeoutlen=1000 ttimeoutlen=0
 
 set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -91,6 +91,10 @@ nnoremap // <leader>ci
 " *           Plugin Customization            *
 " *********************************************
 
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
