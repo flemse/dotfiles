@@ -6,6 +6,10 @@ verbose=true
 
 mkdir -p $olddir
 
+# Setup color schemes for vim
+mkdir -p ~/.vim/colors
+curl https://raw.githubusercontent.com/DrSpatula/vim-buddy/master/colors/buddy.vim > ~/.vim/colors/buddy.vim
+
 if ! git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle &> /dev/null; then
   $verbose && echo "vundle already installed. Moving on"
 fi
