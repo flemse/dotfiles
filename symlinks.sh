@@ -2,7 +2,7 @@
 
 dir=~/.dotfiles
 olddir=$dir/tmp
-files="gemrc gitconfig gvimrc powconfig ruby-version vimrc xrayconfig zshrc"
+files="gemrc gitconfig gvimrc powconfig ruby-version vimrc xrayconfig zshrc tmux.conf"
 verbose=false
 
 mkdir -p $olddir
