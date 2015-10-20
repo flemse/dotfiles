@@ -1,7 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
@@ -28,12 +28,13 @@ Plugin 'SQLUtilities'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'dsawardekar/ember.vim'
 
+call vundle#end()            " required
+filetype plugin indent on    " required
 " *********************************************
 " *                 Settings                  *
 " *********************************************
 set encoding=utf-8
 syntax enable on
-filetype plugin indent on         " load file type plugins + indentation
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -74,7 +75,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 set t_Co=256                      " Set terminal to 256 colors
-colorscheme buddy
+colorscheme buddy_modified
 
 autocmd BufWritePre * :%s/\s\+$//e " auto remove trailing whitespace
 
