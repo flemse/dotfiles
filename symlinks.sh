@@ -2,8 +2,7 @@
 
 dir=~/.dotfiles
 olddir=$dir/tmp
-files="gemrc gitconfig gvimrc powconfig ruby-version vimrc xrayconfig zshrc tmux.conf"
-verbose=false
+verbose=true
 
 mkdir -p $olddir
 
@@ -11,9 +10,10 @@ if ! git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle &> /dev
   $verbose && echo "vundle already installed. Moving on"
 fi
 
-for file in $files; do
+for file in $(ls $dir/scripts)
+do
   mv -f ~/.$file $olddir &> /dev/null
-  if ! ln -s $dir/$file ~/.$file &> /dev/null; then
+  if ! ln -s $dir/scripts/$file ~/.$file &> /dev/null; then
     $verbose && echo "$file already symlinked"
   fi
 done
