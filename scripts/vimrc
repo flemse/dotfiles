@@ -2,37 +2,37 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " *********************************************
 " *          Vundle - Vim Plugins             *
 " *********************************************
-Bundle 'tpope/vim-rails.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-endwise'
-Bundle 'ervandew/supertab'
-Bundle 'chriskempson/base16-vim'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'groenewege/vim-less'
-Bundle 'SQLUtilities'
-Bundle 'heartsentwined/vim-emblem'
-Bundle 'dsawardekar/ember.vim'
+Plugin 'tpope/vim-rails.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-haml'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-endwise'
+Plugin 'ervandew/supertab'
+Plugin 'chriskempson/base16-vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'groenewege/vim-less'
+Plugin 'SQLUtilities'
+Plugin 'heartsentwined/vim-emblem'
+Plugin 'dsawardekar/ember.vim'
 
 " *********************************************
 " *                 Settings                  *
 " *********************************************
 set encoding=utf-8
-syntax enable
+syntax enable on
 filetype plugin indent on         " load file type plugins + indentation
 
 set showcmd                       " Display incomplete commands.
@@ -113,7 +113,7 @@ if filereadable(glob("~/.vim/.vimrc.rails"))
 endif
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_enable_ruby_checker = 1

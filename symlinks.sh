@@ -2,15 +2,16 @@
 
 dir=~/.dotfiles
 olddir=$dir/tmp
-verbose=true
+verbose=false
 
 mkdir -p $olddir
 
 # Setup color schemes for vim
 mkdir -p ~/.vim/colors
-curl https://raw.githubusercontent.com/DrSpatula/vim-buddy/master/colors/buddy.vim > ~/.vim/colors/buddy.vim
+curl https://raw.githubusercontent.com/DrSpatula/vim-buddy/master/colors/buddy.vim > ~/.vim/colors/buddy_modified.vim
 
-if ! git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle &> /dev/null; then
+if ! git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &> /dev/null
+then
   $verbose && echo "vundle already installed. Moving on"
 fi
 
