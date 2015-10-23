@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-rails.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'ggreer/the_silver_searcher'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-haml'
@@ -60,7 +61,8 @@ set nofoldenable                  "dont fold by default
 set hidden                        " Handle multiple buffers better.
 set title                         " Set the terminal's title
 set number                        " Show line numbers.
-set relativenumber
+set re=1
+"set relativenumber
 set ruler                         " Show cursor position.
 set wildmode=list:longest         " Complete files like a shell.
 set wildmenu                      " Enhanced command line completion.
@@ -97,6 +99,8 @@ nnoremap // <leader>ci
 " *********************************************
 " *           Plugin Customization            *
 " *********************************************
+" ####### The Silver Searcher ########
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
