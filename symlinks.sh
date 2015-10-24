@@ -3,6 +3,7 @@
 dir=~/.dotfiles
 olddir=$dir/tmp
 verbose=false
+launchagentsPath=$dir/launchagents
 
 mkdir -p $olddir
 
@@ -10,6 +11,12 @@ if ! git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.
 then
   $verbose && echo "vundle already installed. Moving on"
 fi
+
+for file in $(ls $dir/launchagents)
+do
+  ln -s $launchagentsPath ~/Library/LaunchAgents/$file
+  launchctl load ~/Library/LaunchAgents/$file
+done
 
 for file in $(ls $dir/scripts)
 do
