@@ -6,6 +6,7 @@ alias em=ember
 alias be="bundle exec"
 alias bower="noglob bower"
 alias pdflatex="mkdir -p build; pdflatex -output-directory build"
+alias vi=vim
 
 DISABLE_CORRECTION="true"
 
