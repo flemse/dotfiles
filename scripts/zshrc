@@ -22,6 +22,7 @@ source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
 
-eval "$(docker-machine env default 2>&-)"
+eval "$(dinghy shellinit)"
 
 export EDITOR=vim
+export PATH="/usr/local/sbin:$PATH"
