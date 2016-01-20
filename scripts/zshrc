@@ -26,7 +26,7 @@ PATH=$PATH:/usr/local/share/npm/bin
 NODES+=(/usr/local/Cellar/node012/*)
 NODES+=(/usr/local/Cellar/node/*)
 
-eval "$(dinghy shellinit)"
+[ -f dinghy ] && eval "$(dinghy shellinit)"
 
 export EDITOR=vim
 export PATH="/usr/local/sbin:$PATH"
