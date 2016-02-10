@@ -22,8 +22,8 @@ source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
 
-. "/usr/local/bin/chnode"
-NODES+=(/usr/local/Cellar/node012/*)
+. "$(npm bin --global)/chnode"
+
 NODES+=(/usr/local/Cellar/node/*)
 
 [ -f dinghy ] && eval "$(dinghy shellinit)"
