@@ -3,10 +3,12 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="af-magic"
 
 alias em=ember
+alias ems="em s"
 alias be="bundle exec"
 alias bower="noglob bower"
 alias pdflatex="mkdir -p build; pdflatex -output-directory build"
 alias vi=vim
+alias rjw="rake jobs:work"
 
 DISABLE_CORRECTION="true"
 
