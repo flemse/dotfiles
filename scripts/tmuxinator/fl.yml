@@ -27,11 +27,19 @@ root: ~/Repo/flightlogger/flightlogger
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t fl
 
+startup_window: backend
 windows:
-  - main:
+  - backend:
       layout: main-vertical
       panes:
         - vim
         - rs
         - rjw
-        - guard
+        - #empty
+  - frontend:
+      root: ~/Repo/flightlogger/ember-frontend
+      layout: main-vertical
+      panes:
+        - vim
+        - em s
+        - #empty
