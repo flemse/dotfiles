@@ -81,6 +81,8 @@ set timeoutlen=1000 ttimeoutlen=0
 set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
+set tags=./tags;
+
 set splitbelow
 set splitright
 

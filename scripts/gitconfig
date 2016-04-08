@@ -35,6 +35,7 @@
   untracked = cyan
 [core]
   editor = vim
+  excludesfile = ~/.gitignore
 [branch]
   autosetuprebase = always
 [push]
