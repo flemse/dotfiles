@@ -37,4 +37,8 @@ for vimfile in $(ls $dir/vimfiles); do
     $verbose && echo "$vimfile already symlinked"
   fi
 done
+
+if ! ln -s $dir/Brewfile ~/Brewfile > /dev/null 2>&1; then
+  $verbose && echo "Brewfile already installed"
+fi
 echo "Done!"
