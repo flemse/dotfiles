@@ -24,9 +24,8 @@ source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
 
-. "$(npm bin --global)/chnode"
-
-NODES+=(/usr/local/Cellar/node/*)
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
 [ -f dinghy ] && eval "$(dinghy shellinit)"
 
