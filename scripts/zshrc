@@ -9,6 +9,7 @@ alias bower="noglob bower"
 alias pdflatex="mkdir -p build; pdflatex -output-directory build"
 alias vi=vim
 alias rjw="rake jobs:work"
+alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
 DISABLE_CORRECTION="true"
 
