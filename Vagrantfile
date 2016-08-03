@@ -26,16 +26,22 @@ Vagrant.configure("2") do |config|
 
   config.ssh.forward_agent = true
   config.vm.provision :shell, privileged: false, :inline => %[
+    echo "Setup language"
     export DEBIAN_FRONTEND=noninteractive
     export LANGUAGE=en_US.UTF-8
     export LANG=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
-    locale-gen en_US.UTF-8
+    sudo locale-gen en_US en_US.UTF-8
     sudo dpkg-reconfigure locales
 
     sudo apt-get update -y > /dev/null
     echo "Installing from apt-get"
-    sudo apt-get install curl zsh git-all build-essential libssl-dev tmux -y > /dev/null
+    sudo apt-get install curl zsh git-all build-essential \
+                         libssl-dev tmux postgresql postgresql-contrib -y > /dev/null
+
+    echo "Installing Postgresql"
+    sudo -u postgres createuser --superuser $USER
+    sudo -u postgres createdb $USER
 
     echo "Installing oh-my-zsh"
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -53,7 +59,6 @@ Vagrant.configure("2") do |config|
       git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin` > /dev/null
     ) && . "$NVM_DIR/nvm.sh"
 
-
     echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zshrc
     echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" # This loads nvm" >> ~/.zshrc
 
@@ -70,6 +75,16 @@ Vagrant.configure("2") do |config|
     tar -xzvf chruby-0.3.9.tar.gz
     cd chruby-0.3.9/
     sudo make install
+
+    echo "Installing dotfiles"
+    git clone https://github.com/flemse/dotfiles.git ~/.dotfiles > /dev/null
+    cd ~/.dotfiles
+    ./symlinks.sh
+
+    #-------------------Done installing stuff-------------------
+
+    echo "Setup vim"
+    vim +BundleInstall +qall! > /dev/null
   ]
 
   # Create a private network, which allows host-only access to the machine
