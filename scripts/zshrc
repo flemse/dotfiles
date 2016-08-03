@@ -6,19 +6,16 @@ alias em=ember
 alias ems="em s"
 alias be="bundle exec"
 alias bower="noglob bower"
-alias pdflatex="mkdir -p build; pdflatex -output-directory build"
 alias vi=vim
 alias rjw="rake jobs:work"
+alias dotfiles="cd ~/.dotfiles"
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
 DISABLE_CORRECTION="true"
 
-DISABLE_AUTO_UPDATE="true" #Stop breaking my shit!
-
 plugins=(docker git gem rails ruby heroku bundler brew pass npm)
 
 source $ZSH/oh-my-zsh.sh
-[ -f dnvm.sh ] &&  source dnvm.sh
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
@@ -26,9 +23,7 @@ source /usr/local/share/chruby/auto.sh
 PATH=$PATH:/usr/local/share/npm/bin
 
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
-[ -f dinghy ] && eval "$(dinghy shellinit)"
+[ -f brew ] && . "$(brew --prefix nvm)/nvm.sh"
 
 export EDITOR=vim
 export PATH="/usr/local/sbin:$PATH"
