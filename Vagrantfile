@@ -34,57 +34,56 @@ Vagrant.configure("2") do |config|
     sudo locale-gen en_US en_US.UTF-8
     sudo dpkg-reconfigure locales
 
-    sudo apt-get update -y > /dev/null
+    sudo apt-get -qq update -y > /dev/null
     echo "Installing from apt-get"
-    sudo apt-get install curl zsh git-all build-essential \
-                         libssl-dev tmux postgresql postgresql-contrib -y > /dev/null
+    sudo apt-get -qq install curl zsh git-all build-essential \
+                         libssl-dev tmux postgresql postgresql-contrib -y &> /dev/null
 
     echo "Installing Postgresql"
     sudo -u postgres createuser --superuser $USER
     sudo -u postgres createdb $USER
 
     echo "Installing oh-my-zsh"
-    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+    git clone -q git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
     sudo chsh -s /bin/zsh vagrant
 
     echo "Installing heroku toolbelt"
-    curl -sS -o- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+    cd ~/
+    wget -qO install-heroku.sh https://toolbelt.heroku.com/install-ubuntu.sh &> /dev/null
+    sh install-heroku.sh &> /dev/null
 
     echo "Installing nvm"
     export NVM_DIR="$HOME/.nvm" && (
       rm -rf "$NVM_DIR"
-      git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+      git clone -q https://github.com/creationix/nvm.git "$NVM_DIR"
       cd "$NVM_DIR"
-      git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin` > /dev/null
+      git checkout -q `git describe --abbrev=0 --tags --match "v[0-9]*" origin` > /dev/null
     ) && . "$NVM_DIR/nvm.sh"
-
-    echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zshrc
-    echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" # This loads nvm" >> ~/.zshrc
 
     echo "Installing ruby-install"
     cd ~/
-    wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
-    tar -xzvf ruby-install-0.6.0.tar.gz
+    wget -qO ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
+    tar -xzvf ruby-install-0.6.0.tar.gz > /dev/null
     cd ruby-install-0.6.0/
-    sudo make install
+    sudo make install > /dev/null
 
     echo "Installing chruby"
     cd ~/
-    wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
-    tar -xzvf chruby-0.3.9.tar.gz
+    wget -qO chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz > /dev/null
+    tar -xzvf chruby-0.3.9.tar.gz > /dev/null
     cd chruby-0.3.9/
-    sudo make install
+    sudo make install > /dev/null
 
     echo "Installing dotfiles"
-    git clone https://github.com/flemse/dotfiles.git ~/.dotfiles > /dev/null
+    git clone -q https://github.com/flemse/dotfiles.git ~/.dotfiles > /dev/null
     cd ~/.dotfiles
     ./symlinks.sh
 
     #-------------------Done installing stuff-------------------
 
     echo "Setup vim"
-    vim +BundleInstall +qall! > /dev/null
+    vim +BundleInstall +qall! &> /dev/null
   ]
 
   # Create a private network, which allows host-only access to the machine

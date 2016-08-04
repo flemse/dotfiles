@@ -23,7 +23,16 @@ source /usr/local/share/chruby/auto.sh
 PATH=$PATH:/usr/local/share/npm/bin
 
 export NVM_DIR="$HOME/.nvm"
-[ -f brew ] && . "$(brew --prefix nvm)/nvm.sh"
+
+# Running on mac
+if [ -x "$(command -v brew)" ]; then
+  . "$(brew --prefix nvm)/nvm.sh"
+fi
+
+# Running on linux
+if [ -x "$(command -v apt-get)" ]; then
+  . "$NVM_DIR/nvm.sh"
+fi
 
 export EDITOR=vim
 export PATH="/usr/local/sbin:$PATH"
