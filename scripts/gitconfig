@@ -39,4 +39,4 @@
 [branch]
   autosetuprebase = always
 [push]
-  default = current
+  default = simple

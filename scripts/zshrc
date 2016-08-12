@@ -13,7 +13,7 @@ alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_
 
 DISABLE_CORRECTION="true"
 
-plugins=(docker git gem rails ruby heroku bundler brew pass npm)
+plugins=(docker git gem rails ruby heroku bundler brew pass npm tmux nvm bower chruby)
 
 source $ZSH/oh-my-zsh.sh
 
