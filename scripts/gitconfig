@@ -4,7 +4,7 @@
   uncommit = reset --soft HEAD^
   co = checkout
   st = status -sb
-  ps = push
+  ps = push -u
   pl = pull
   br = branch
   b = blame --date=relative
@@ -39,4 +39,4 @@
 [branch]
   autosetuprebase = always
 [push]
-  default = simple
+  default = current
