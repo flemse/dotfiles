@@ -31,6 +31,7 @@ Plugin 'SQLUtilities'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'dsawardekar/ember.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'ngmy/vim-rubocop'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
