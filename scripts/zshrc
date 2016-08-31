@@ -15,7 +15,6 @@ DISABLE_CORRECTION="true"
 
 plugins=(docker git gem rails ruby heroku bundler brew pass npm tmux nvm bower chruby)
 
-source $ZSH/oh-my-zsh.sh
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
@@ -36,3 +35,5 @@ fi
 
 export EDITOR=vim
 export PATH="/usr/local/sbin:$PATH"
+
+source $ZSH/oh-my-zsh.sh

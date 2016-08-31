@@ -157,6 +157,10 @@ let g:syntastic_check_on_wq = 0
 " Suppress netrw header
 let g:netrw_banner=0
 
+" Highlight non breaking spaces
+set list
+set listchars=nbsp:!
+
 au BufRead,BufNewFile *.prawn set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.embl set filetype=emblem
