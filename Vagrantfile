@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
 
+  config.vm.synced_folder '.', '/vagrant', :disabled => true
   config.ssh.forward_agent = true
   config.vm.provision :shell, privileged: false, :inline => %[
     echo "Setup language"

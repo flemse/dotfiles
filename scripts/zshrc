@@ -10,6 +10,7 @@ alias vi=vim
 alias rjw="rake jobs:work"
 alias dotfiles="cd ~/.dotfiles"
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components tmp dist && npm install && bower install'
+alias mux=tmuxinator
 
 DISABLE_CORRECTION="true"
 

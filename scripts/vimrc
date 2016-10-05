@@ -32,6 +32,7 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'dsawardekar/ember.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'slim-template/vim-slim.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
