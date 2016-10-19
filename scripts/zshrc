@@ -4,6 +4,8 @@ ZSH_THEME="af-magic"
 
 alias em=ember
 alias ems="em s"
+alias emt="em t"
+alias emts="emt -s"
 alias be="bundle exec"
 alias bower="noglob bower"
 alias vi=vim
@@ -15,7 +17,6 @@ alias mux=tmuxinator
 DISABLE_CORRECTION="true"
 
 plugins=(docker git gem rails ruby heroku bundler brew pass npm tmux nvm bower chruby)
-
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
