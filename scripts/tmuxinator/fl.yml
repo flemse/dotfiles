@@ -41,5 +41,6 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - em s
+        - ems
+        - emts
         - #empty

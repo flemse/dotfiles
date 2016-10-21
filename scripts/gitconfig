@@ -4,7 +4,7 @@
   uncommit = reset --soft HEAD^
   co = checkout
   st = status -sb
-  ps = push -u
+  ps = push
   pl = pull
   br = branch
   b = blame --date=relative
