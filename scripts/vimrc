@@ -107,6 +107,7 @@ autocmd BufWritePre * :%s/\s\+$//e " auto remove trailing whitespace
 " *********************************************
 let mapleader = ","
 
+inoremap jj <Esc>
 " Clear last search highlighting
 nnoremap <Space> :noh<cr>
 
