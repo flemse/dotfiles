@@ -1,7 +1,7 @@
 # ~/.tmuxinator/wa.yml
 
 name: wa
-root: ~/Repo/wishapp/backend
+root: ~/Repo/wishapp/api
 
 # Optional tmux socket
 # socket_name: foo
@@ -27,7 +27,7 @@ root: ~/Repo/wishapp/backend
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t fl
 
-startup_window: backend
+startup_window: api
 windows:
   - backend:
       layout: main-vertical
@@ -37,7 +37,7 @@ windows:
         - guard
         - #empty
   - frontend:
-      root: ~/Repo/wishapp/frontend
+      root: ~/Repo/wishapp/web
       layout: main-vertical
       panes:
         - vim
