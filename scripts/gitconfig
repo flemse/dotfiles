@@ -9,7 +9,7 @@
   br = branch
   b = blame --date=relative
   rpo = remote prune origin
-  clbr = "!git branch --merged | grep  -v '\\*\\|master\\|staging|staging2|production' | xargs -n 1 git branch -d"
+  clbr = "!git branch --merged | grep -v '\\*\\|master\\|staging\\|staging2\\|production' | xargs -n 1 git branch -d"
 [user]
   name = "Flemming Thesbjerg"
   email = flemming.thesbjerg@gmail.com
