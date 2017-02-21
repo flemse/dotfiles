@@ -34,7 +34,7 @@ windows:
       panes:
         - vim
         - rs
-        - rjw
+        - watch -n 1 ./bin/rake jobs:workoff
         - #empty
   - frontend:
       root: ~/Repo/flightlogger/ember-frontend
