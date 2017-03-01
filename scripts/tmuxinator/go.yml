@@ -1,7 +1,7 @@
 # ~/.tmuxinator/fl.yml
 
 name: fl
-root: ~/Repo/flightlogger/flightlogger
+root: ~/Repo/gomore/gomore-web
 
 # Optional tmux socket
 # socket_name: foo
@@ -34,13 +34,5 @@ windows:
       panes:
         - vim
         - rs
-        - watch -n 1 ./bin/rake jobs:workoff
-        - #empty
-  - frontend:
-      root: ~/Repo/flightlogger/ember-frontend
-      layout: main-vertical
-      panes:
-        - vim
-        - ems
-        - emts
+        - rjw
         - #empty
