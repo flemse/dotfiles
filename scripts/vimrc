@@ -33,6 +33,7 @@ Plugin 'dsawardekar/ember.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'OmniSharp/omnisharp-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -147,6 +148,9 @@ let g:mustache_abbrevations=1
 if filereadable(glob("~/.vim/.vimrc.rails"))
     source ~/.vim/.vimrc.rails
 endif
+
+" Enable c# support
+let g:OmniSharp_server_use_mono = 1
 
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}

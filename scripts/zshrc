@@ -2,26 +2,24 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="af-magic"
 
-alias em=ember
-alias ems="em s"
-alias emt="em t"
-alias emts="emt -s"
 alias be="bundle exec"
 alias bower="noglob bower"
 alias vi=vim
-alias rjw="rake jobs:work"
+alias dn=dotnet
 alias dotfiles="cd ~/.dotfiles"
-alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components tmp dist && npm install && bower install'
 alias mux=tmuxinator
 
 DISABLE_CORRECTION="true"
 
-plugins=(docker git gem rails ruby heroku bundler brew pass npm tmux nvm bower chruby)
+plugins=(docker git brew npm tmux nvm bower chruby)
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 PATH=$PATH:/usr/local/share/npm/bin
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
 
 export NVM_DIR="$HOME/.nvm"
 
