@@ -11,29 +11,23 @@ Plugin 'VundleVim/Vundle.vim'
 " *********************************************
 " *          Vundle - Vim Plugins             *
 " *********************************************
-Plugin 'tpope/vim-rails.git'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-haml'
-Plugin 'lucapette/vim-ruby-doc'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-endwise'
 Plugin 'ervandew/supertab'
 Plugin 'chriskempson/base16-vim'
-Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'christophermca/meta5'
 Plugin 'groenewege/vim-less'
 Plugin 'SQLUtilities'
-Plugin 'heartsentwined/vim-emblem'
-Plugin 'dsawardekar/ember.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'ngmy/vim-rubocop'
 Plugin 'slim-template/vim-slim.git'
-Plugin 'OmniSharp/omnisharp-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -141,7 +135,7 @@ noremap <Right> <NOP>
 "# ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,obj/*   " for Linux/MacOSX
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:mustache_abbrevations=1
 
