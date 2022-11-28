@@ -1,0 +1,42 @@
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  d = diff
+  uncommit = reset --soft HEAD^
+  co = checkout
+  st = status -sb
+  ps = push
+  pl = pull
+  br = branch
+  b = blame --date=relative
+  rpo = remote prune origin
+  clbr = "!git branch --merged | grep -v '\\*\\|master\\|staging\\|staging2\\|production' | xargs -n 1 git branch -d"
+[user]
+  name = "Flemming Thesbjerg"
+  email = flemming.thesbjerg@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[branch]
+  autosetuprebase = always
+[push]
+  default = current
