@@ -12,7 +12,7 @@
   clbr = "!git branch --merged | grep -v '\\*\\|master\\|staging\\|staging2\\|production' | xargs -n 1 git branch -d"
 [user]
   name = "Flemming Thesbjerg"
-  email = flemming.thesbjerg@gmail.com
+  email = flemming.thesbjerg@lego.com
 [color]
   diff = auto
   status = auto
@@ -40,3 +40,4 @@
   autosetuprebase = always
 [push]
   default = current
+  autoSetupRemote = true
