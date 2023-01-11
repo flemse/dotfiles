@@ -9,10 +9,11 @@
   br = branch
   b = blame --date=relative
   rpo = remote prune origin
-  clbr = "!git branch --merged | grep -v '\\*\\|master\\|staging\\|staging2\\|production' | xargs -n 1 git branch -d"
+  clbr = "!git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 [user]
   name = "Flemming Thesbjerg"
   email = flemming.thesbjerg@lego.com
+  signingkey = 2149FA86680C7C2D
 [color]
   diff = auto
   status = auto
@@ -41,3 +42,9 @@
 [push]
   default = current
   autoSetupRemote = true
+[commit]
+  gpgsign = true
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

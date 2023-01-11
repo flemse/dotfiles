@@ -70,7 +70,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker brew)
+plugins=(git docker brew gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,16 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias k=kubectl
 alias g=git
+alias got='go test ./...'
+alias tf=terraform
 
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(saml2aws --completion-script-zsh)"
 eval "$(kubectl completion zsh)"
 
-export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/carya_config"
-
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-# But why?!
-export GPG_TTY=$(tty)
